@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="slider">
+  <!-- <image src='/assets/images/banner-01.png'></image> -->
+
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="10000" duration="800">
+    <block wx:for="{{imgUrls}}" wx:key="navItems">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='index-nav'>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-01.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-02.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-03.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-04.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-05.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-06.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-07.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-08.png'></image>
+      <text>美食</text>
+    </navigator>
+    <navigator class='nav-item'>
+      <image src='/assets/icons/grid-09.png'></image>
+      <text>美食</text>
+    </navigator>
+  </view>
+</view>
+
+<view class='index-enter'>
+  <navigator class='enter-item'>
+    <image src='/assets/images/link-01.png'></image>
+  </navigator>
+
+  <navigator class='c'>
+    <image src='/assets/images/link-02.png'></image>
+  </navigator>
+
+</view>

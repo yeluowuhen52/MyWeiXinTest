@@ -58,7 +58,7 @@
 
 .index-enter{
   display: flex;
-  padding: 20rpx 30rpx;
+  padding: 10rpx 10rpx;
 }
 
 .index-enter .enter-item{

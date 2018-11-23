@@ -55,7 +55,7 @@
     <image src='/assets/images/link-01.png'></image>
   </navigator>
 
-  <navigator class='c'>
+  <navigator class='enter-item'>
     <image src='/assets/images/link-02.png'></image>
   </navigator>
 

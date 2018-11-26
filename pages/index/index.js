@@ -10,6 +10,15 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgUrls: ['/assets/images/banner-01.png', '/assets/images/banner-02.png', '/assets/images/banner-02.png']
   },
+  onLoad: function() {
+    wx.request({
+      url: 'https://locally.uieee.com/slides',
+      success: function(res) {
+        console.log(res);
+      }
+    })
+
+  }
   //事件处理函数
   // bindViewTap: function() {
   //   wx.navigateTo({

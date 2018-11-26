@@ -36,18 +36,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "单页调试",
-					"pathName": "pages/message/message",
+					"pathName": "pages/shopList/shopList",
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "单页调试",
-					"pathName": "pages/profile/profile"
+					"pathName": "pages/profile/profile",
+					"query": ""
 				}
 			]
 		}

@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,20 +8,46 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 
 /* 功能封装：箭头 */
-.arrow{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.arrow::after{
-    content: "";
-    width: 15rpx;
-    height: 15rpx;
-    border-top: 3rpx solid #ccc;
-    border-right: 3rpx solid #ccc;
-    transform: rotate(45deg);
+
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.arrow::after {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid #ccc;
+  border-right: 3rpx solid #ccc;
+  transform: rotate(45deg);
+}
+
+/*居中展示*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 20rpx;
+  background-color: #f1f1f1;
+  box-shadow: 0 5rpx 5rpx rgba(0, 0, 0, 0.1) inset;
+}
+
+/*列表封装*/
+
+.cell {
+  font-size: 16px;
+}
+
+.cell-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}

@@ -11,8 +11,8 @@
   </swiper>
 
   <view class='index-nav'>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-01.png'></image>
+    <navigator class='nav-item' url='/pages/shopList/shopList'>
+      <image src='/assets/icons/grid-01.png' ></image>
       <text>美食</text>
     </navigator>
     <navigator class='nav-item'>

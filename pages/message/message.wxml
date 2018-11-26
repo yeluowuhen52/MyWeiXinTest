@@ -1,2 +1,9 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<!-- <text>pages/message/message.wxml</text> -->
+<view class='card'>
+<text class='card-title'>标题1111</text>
+<text class='card-date'>2017-11-11</text>
+<image class = 'card-image'src='/assets/images/banner-01.png' mode='aspectFill'></image>
+<text class='card-desc'>越努力越幸运</text>
+<text class='card-read arrow'>查看详情</text>
+</view>

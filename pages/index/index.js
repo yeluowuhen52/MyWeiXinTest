@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     sliderList: [],
+    categories:[],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -19,6 +20,17 @@ Page({
         // this.data.sliderList = res;
         this.setData({
           sliderList: res.data
+        });
+      }
+    })
+
+    wx.request({
+      url: 'https://locally.uieee.com/categories',
+      success: (res) => {
+        console.log(res);
+        // this.data.categories = res;
+        this.setData({
+          categories: res.data
         });
       }
     })

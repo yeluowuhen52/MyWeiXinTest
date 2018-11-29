@@ -11,42 +11,12 @@
   </swiper>
 
   <view class='index-nav'>
-    <navigator class='nav-item' url='/pages/shopList/shopList'>
-      <image src='/assets/icons/grid-01.png' ></image>
-      <text>美食</text>
+
+    <navigator wx:for="{{categories}}" wx:key="id" class='nav-item' url='/pages/shopList/shopList?cat={{item.id}}'>
+      <image src="{{item.icon}}" ></image>
+      <text>{{item.name}}</text>
     </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-02.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-03.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-04.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-05.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-06.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-07.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-08.png'></image>
-      <text>美食</text>
-    </navigator>
-    <navigator class='nav-item'>
-      <image src='/assets/icons/grid-09.png'></image>
-      <text>美食</text>
-    </navigator>
+
   </view>
 </view>
 

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      shopList:[]
+    shopList: []
   },
 
   /**
@@ -13,15 +13,15 @@ Page({
    */
   onLoad: function(options) {
     wx.request({
-      url: 'https://locally.uieee.com/categories/1/shops',
+      url: 'https://locally.uieee.com/categories/' + options.cat + '/shops',
       data: {
-        _limit:10,
-        page:1
+        _limit: 10,
+        page: 1
       },
-      success: (res)=> {
+      success: (res) => {
         // console.log(res)
         this.setData({
-          shopList : res.data
+          shopList: res.data
         });
       },
     })

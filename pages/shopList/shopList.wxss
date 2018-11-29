@@ -24,28 +24,20 @@ page {
   color: #666;
 }
 
-.shop-star {
-  position: absolute;
-  right: 0;
-  top: 0;
+.shop-star{
+    position: absolute;
+    right:20rpx;
+    top:20rpx;
 }
 
 .shop-title {
   font-size: 16px;
   color: #333;
   line-height: 1.5;
+  width: 380rpx;
+
 }
 
 
-/* 功能封装7：星星评分封装 */
-.star-after{
-    color: #e2e2e2;
-}
-.star-before{
-    color:#f19e38;
-    position: absolute;
-    left:0;
-    top:0;
-    width: 90%;
-    overflow: hidden;
-}
+
+

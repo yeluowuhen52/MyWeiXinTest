@@ -40,7 +40,7 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "单页调试",
+					"name": "shopList",
 					"pathName": "pages/shopList/shopList",
 					"query": ""
 				},

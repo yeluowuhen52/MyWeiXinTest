@@ -51,3 +51,28 @@
   padding: 20rpx 30rpx;
   border-bottom: 1rpx solid #ddd;
 }
+
+/* 功能封装7：星星评分封装 */
+
+.star-after {
+  color: #e2e2e2;
+}
+
+.star-before {
+  color: #f19e38;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  overflow: hidden;
+}
+
+/*
+*超出范围进行缩略
+*/
+
+.ell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

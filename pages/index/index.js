@@ -13,6 +13,7 @@ Page({
     imgUrls: ['/assets/images/banner-01.png', '/assets/images/banner-02.png', '/assets/images/banner-02.png']
   },
   onLoad: function() {
+    //获取轮播图数据
     wx.request({
       url: 'https://locally.uieee.com/slides',
       success: (res) => {
@@ -23,7 +24,7 @@ Page({
         });
       }
     })
-
+    //获取底部方块数据
     wx.request({
       url: 'https://locally.uieee.com/categories',
       success: (res) => {

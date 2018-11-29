@@ -9,6 +9,7 @@
     <text class='shop-time'>营业时间</text>
   </view>
   <view class='shop-star'>
-    xingxing
+    <view class='star-after'>★★★★★</view>
+    <view class='star-before'>★★★★★</view>
   </view>
 </view>

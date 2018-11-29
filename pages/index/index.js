@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    sliderList: [],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -13,8 +14,12 @@ Page({
   onLoad: function() {
     wx.request({
       url: 'https://locally.uieee.com/slides',
-      success: function(res) {
+      success: (res) => {
         console.log(res);
+        // this.data.sliderList = res;
+        this.setData({
+          sliderList: res.data
+        });
       }
     })
 

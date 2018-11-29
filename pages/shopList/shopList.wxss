@@ -8,6 +8,7 @@ page {
   padding: 20rpx;
   border-bottom: 1rpx solid #ddd;
   display: flex;
+  position: relative;
 }
 
 .shop-image {
@@ -24,10 +25,10 @@ page {
   color: #666;
 }
 
-.shop-star{
-    position: absolute;
-    right:20rpx;
-    top:20rpx;
+.shop-star {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
 }
 
 .shop-title {
@@ -35,9 +36,4 @@ page {
   color: #333;
   line-height: 1.5;
   width: 380rpx;
-
 }
-
-
-
-

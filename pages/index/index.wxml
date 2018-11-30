@@ -11,7 +11,7 @@
   </swiper>
 
   <view class='index-nav'>
-    <navigator wx:for="{{categories}}" wx:key="id" class='nav-item' url='/pages/shopList/shopList?cat={{item.id}}'>
+    <navigator wx:for="{{categories}}" wx:key="id" class='nav-item' url='/pages/shopList/shopList?cat={{item.id}}&title={{item.name}}'>
       <image src="{{item.icon}}" ></image>
       <text>{{item.name}}</text>
     </navigator>

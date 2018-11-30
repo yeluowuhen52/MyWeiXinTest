@@ -42,7 +42,7 @@
 					"id": 0,
 					"name": "shopList",
 					"pathName": "pages/shopList/shopList",
-					"query": "cat=1"
+					"query": "cat=1&title=测试"
 				},
 				{
 					"id": -1,

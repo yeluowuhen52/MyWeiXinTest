@@ -5,9 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shopList: []
+    shopList: [],
+    pageIndex: 0,
+    pageSize: 15,
+    catId: 1
   },
-
+  //loaddata
+  loadMore: function() {
+    wx.request({
+      url: 'https://locally.uieee.com/categories/' + this.data.catId + '/shops',
+      data: {
+        _limit: this.data.pageSize,
+        page: ++this.data.pageIndex
+      },
+      success: (res) => {
+        // console.log(res)
+        var newList = this.data.shopList.concat(res.data);
+        this.setData({
+          shopList: newList
+        });
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,19 +35,10 @@ Page({
     wx.setNavigationBarTitle({
       title: options.title,
     });
-    wx.request({
-      url: 'https://locally.uieee.com/categories/' + options.cat + '/shops',
-      data: {
-        _limit: 10,
-        page: 1
-      },
-      success: (res) => {
-        // console.log(res)
-        this.setData({
-          shopList: res.data
-        });
-      },
-    })
+    this.setData({
+      catId: options.cat
+    });
+    this.loadMore();
   },
 
   /**
@@ -70,6 +80,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
+    this.loadMore();
 
   },
 

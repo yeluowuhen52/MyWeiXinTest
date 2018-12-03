@@ -10,41 +10,53 @@ Page({
     shopList: [],
     _page: 0,
     _limit: 15,
-    catId: 1
+    catId: 1,
+    hasMore: true
   },
   //loaddata
   loadMore: function() {
-    const { _page, _limit, cate_id } = this.data;
+    if (!this.data.hasMore) {
+      return;
+    }
 
-    fetch('https://locally.uieee.com/categories/' + this.data.catId + '/shops', 'GET', { _page, _limit }).then(res => {
-      //拼接达到数据的累加
-      const shops = this.data.shopList.concat(res.data)
-      //console.log(res.header) 在响应头中X-Total-Count代表数据总数
-      //判断是否还有数据
-      const hasMore = _page * _limit < (res.header['X-Total-Count'] - 0)
-      this.setData({ shopList: shops, hasMore })
-      //关闭下拉动画
-      wx.stopPullDownRefresh()
-      //关闭上拉提示
-      // wx.hideLoading()
-      //导航加载关闭
-      // wx.hideNavigationBarLoading()
-    }).catch();
+    // const {
+    //   _page,
+    //   _limit,
+    //   cate_id
+    // } = this.data;
 
-    // wx.request({
-    //   url: 'https://locally.uieee.com/categories/' + this.data.catId + '/shops',
-    //   data: {
-    //     _limit: this.data._limit,
-    //     _page: this.data._page
-    //   },
-    //   success: (res) => {
-    //     // console.log(res)
-    //     var newList = this.data.shopList.concat(res.data);
-    //     this.setData({
-    //       shopList: newList
-    //     });
-    //   },
-    // })
+    // fetch('https://locally.uieee.com/categories/' + this.data.catId + '/shops', 'GET', { _page, _limit }).then(res => {
+    //   //拼接达到数据的累加
+    //   const shops = this.data.shopList.concat(res.data)
+    //   //console.log(res.header) 在响应头中X-Total-Count代表数据总数
+    //   //判断是否还有数据
+    //   const hasMore = _page * _limit < (res.header['X-Total-Count'] - 0)
+    //   this.setData({ shopList: shops, hasMore })
+    //   //关闭下拉动画
+    //   wx.stopPullDownRefresh()
+    //   //关闭上拉提示
+    //   // wx.hideLoading()
+    //   //导航加载关闭
+    //   // wx.hideNavigationBarLoading()
+    // }).catch();
+
+    wx.request({
+      url: 'https://locally.uieee.com/categories/' + this.data.catId + '/shops',
+      data: {
+        _limit: this.data._limit,
+        _page: this.data._page
+      },
+      success: (res) => {
+        // console.log(res)
+        var newList = this.data.shopList.concat(res.data);
+        var count = parseInt(res.header['X-Total-Count']);
+        var flag = this.data._page * this.data._limit < count;
+        this.setData({
+          shopList: newList,
+          hasMore: flag
+        });
+      },
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -94,7 +106,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-    this.setData({ shopList: [], _page: 0, _limit: 10 })
+    this.setData({
+      shopList: [],
+      _page: 0,
+      _limit: 10
+    })
     this.loadMore()
   },
 

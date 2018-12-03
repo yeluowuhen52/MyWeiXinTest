@@ -1,6 +1,6 @@
 <!--pages/shopList/shopList.wxml-->
 <!-- <text>pages/shopList/shopList.wxml</text> -->
-<view class="shop" wx:for="{{ shopList }}" wx:key="id">
+<view class="shop" wx:for="{{ shopList }}" wx:key="{{item.id}}">
   <image class="shop-image" src="{{ item.images[0] }}"></image>
   <view class="shop-info">
     <text class="shop-title ell">{{ item.name }}</text>

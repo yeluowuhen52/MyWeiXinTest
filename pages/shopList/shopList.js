@@ -109,7 +109,8 @@ Page({
     this.setData({
       shopList: [],
       _page: 0,
-      _limit: 10
+      _limit: 10,
+      hasMore: true
     })
     this.loadMore()
   },

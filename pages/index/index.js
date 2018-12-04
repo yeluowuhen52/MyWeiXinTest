@@ -27,14 +27,14 @@ Page({
 
     
     //获取轮播图数据
-    wx.request({
-      url: 'http://172.17.24.134:8080/user/findAll',
-      success: (res) => {
-        console.log(res);
-        // this.data.sliderList = res;
+    // wx.request({
+    //   url: 'http://172.17.24.134:8080/user/findAll',
+    //   success: (res) => {
+    //     console.log(res);
+    //     // this.data.sliderList = res;
         
-      }
-    })
+    //   }
+    // })
 
     //获取底部方块数据
     wx.request({

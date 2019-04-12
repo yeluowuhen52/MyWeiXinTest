@@ -6,7 +6,7 @@ Page({
   data: {
     sliderList: [],
     categories:[],
-    motto: 'Hello World',
+    motto: 'Hello My World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),

@@ -6,12 +6,11 @@
     "pages/contact/contact",
     "pages/shopList/shopList"
   ],
- 
   "window": {
     "navigationBarBackgroundColor": "#f60",
     "navigationBarTitleText": "本地宝",
     "navigationBarTextStyle": "white"
-  },
+  },   
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#ee532d",
@@ -41,5 +40,6 @@
         "selectedIconPath": "/assets/tabs/contact-active.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
